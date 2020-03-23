@@ -451,6 +451,7 @@ def to_category(string, categories):
     # If time, add here the matching report
 
 def to_date(string, dateformat):
+    string = string.replace('/', '-')
     try:
         datetime.strptime(string, dateformat) # Check this is possible
     except:
